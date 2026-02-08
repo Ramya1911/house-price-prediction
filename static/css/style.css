@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.form-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.main-title {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.prediction-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.predict-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(to right, #1abc9c, #16a085);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.predict-btn:hover {
+    background: linear-gradient(to right, #16a085, #1abc9c);
+    transform: scale(1.05);
+}
+
+.result-box {
+    text-align: center;
+    margin-top: 20px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #1abc9c;
+    margin-bottom: 10px;
+}
+
+.footer h2 {
+    color: #2c3e50;
+}
+
+.footer p {
+    color: #7f8c8d;
+}

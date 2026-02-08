@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Prediction</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+<div class="overlay">
+    <div class="container form-box">
+
+        <h1 class="main-title">🏠 House Price Prediction</h1>
+        <p class="subtitle">Machine Learning Model using SLR</p>
+
+        <form action="/predict" method="POST" class="prediction-form">
+            <input type="text" name="bedrooms" placeholder="Number of Bedrooms" required>
+            <input type="text" name="bathrooms" placeholder="Number of Bathrooms" required>
+            <input type="text" name="sqft_living" placeholder="Living Area (sqft)">
+            <input type="text" name="sqft_lot" placeholder="Lot Size (sqft)">
+            <input type="text" name="floors" placeholder="Number of Floors">
+            <input type="text" name="waterfront" placeholder="Waterfront (0/1)">
+            <input type="text" name="view" placeholder="View Rating">
+            <input type="text" name="condition" placeholder="Building Condition">
+            <input type="text" name="sqft_above" placeholder="Above Sqft">
+            <input type="text" name="sqft_basement" placeholder="Basement Sqft">
+            <input type="text" name="yr_built" placeholder="Year Built">
+            <input type="text" name="yr_rennovated" placeholder="Year Renovated">
+            <input type="text" name="city" placeholder="City">
+            <input type="text" name="zipcode" placeholder="Zipcode">
+            <input type="text" name="country" placeholder="Country">
+            <input type="text" name="Year" placeholder="Year">
+            <input type="text" name="month" placeholder="Month">
+            <input type="text" name="day_of_week" placeholder="Day of Week">
+
+            <button type="submit" class="predict-btn">🔮 Predict Price</button>
+        </form>
+
+        <div class="result-box">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <img src="{{ url_for('static', filename='images/Ramya.jpg') }}" alt="Ramya Photo" class="profile-img">
+            <h2>Kammari Ramya</h2>
+            <p>Data Scientist & NLP Engineer</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
